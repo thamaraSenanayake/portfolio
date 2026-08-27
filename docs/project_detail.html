@@ -166,12 +166,12 @@
 <!-- Top Navigation Bar -->
 <nav class="fixed top-0 w-full z-50 bg-surface/40 backdrop-blur-xl border-b border-outline-variant/10">
 <div class="flex justify-between items-center h-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-<a class="font-display-xl text-headline-lg-mobile tracking-tighter text-primary" href="portfolio.html">THAMARA.DEV</a>
+<a class="font-display-xl text-headline-lg-mobile tracking-tighter text-primary" href="index.html">THAMARA.DEV</a>
 <div class="hidden md:flex space-x-gutter">
-<a class="text-primary border-b-2 border-primary pb-1 font-code-accent text-code-accent" href="portfolio.html#projects">Projects</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors hover:bg-primary/10 transition-all duration-300 font-code-accent text-code-accent" href="portfolio.html#skills">Skills</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors hover:bg-primary/10 transition-all duration-300 font-code-accent text-code-accent" href="portfolio.html#experience">Experience</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors hover:bg-primary/10 transition-all duration-300 font-code-accent text-code-accent" href="portfolio.html#about">About</a>
+<a class="text-primary border-b-2 border-primary pb-1 font-code-accent text-code-accent" href="index.html#projects">Projects</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:bg-primary/10 transition-all duration-300 font-code-accent text-code-accent" href="index.html#skills">Skills</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:bg-primary/10 transition-all duration-300 font-code-accent text-code-accent" href="index.html#experience">Experience</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:bg-primary/10 transition-all duration-300 font-code-accent text-code-accent" href="index.html#about">About</a>
 </div>
 <button onclick="window.location.href='mailto:thamarasasanka@gmail.com'" class="hidden md:block px-4 py-2 border border-primary text-primary font-code-accent text-code-accent rounded-DEFAULT hover:bg-primary/10 transition-all duration-300 active:scale-95 glow-effect">Contact</button>
 <button class="md:hidden text-primary">
@@ -188,7 +188,7 @@
 <div class="max-w-container-max mx-auto relative z-10">
 <!-- Breadcrumbs / Back Action -->
 <div class="mb-8">
-<a class="inline-flex items-center text-on-surface-variant hover:text-primary transition-colors font-code-accent text-code-accent group" href="portfolio.html">
+<a class="inline-flex items-center text-on-surface-variant hover:text-primary transition-colors font-code-accent text-code-accent group" href="index.html">
 <span class="material-symbols-outlined mr-2 text-sm group-hover:-translate-x-1 transition-transform" data-icon="arrow_back">arrow_back</span>
                     Back to Projects
                 </a>
@@ -297,7 +297,7 @@
         const project = projectsData.find(p => p.id === projectId);
         if (!project) {
             console.error("Project not found: " + projectId);
-            window.location.href = "portfolio.html";
+            window.location.href = "index.html";
             return;
         }
 

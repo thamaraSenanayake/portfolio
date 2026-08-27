@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+
+<html class="dark scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Thamara Senanayake - Mobile App Development</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&amp;family=JetBrains+Mono:wght@500;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-primary-fixed-variant": "#004e60",
+                      "secondary-container": "#36ffc4",
+                      "surface-container": "#171f33",
+                      "on-tertiary-container": "#6000dd",
+                      "secondary-fixed-dim": "#00e1ab",
+                      "on-tertiary-fixed": "#23005b",
+                      "inverse-on-surface": "#283044",
+                      "on-secondary": "#003828",
+                      "on-error": "#690005",
+                      "on-surface-variant": "#bbc9cf",
+                      "surface-container-high": "#222a3d",
+                      "on-background": "#dae2fd",
+                      "secondary": "#ffffff",
+                      "on-surface": "#dae2fd",
+                      "surface-bright": "#31394d",
+                      "surface-container-highest": "#2d3449",
+                      "surface": "#0b1326",
+                      "on-primary-fixed": "#001f28",
+                      "surface-dim": "#0b1326",
+                      "outline": "#859399",
+                      "on-tertiary-fixed-variant": "#5700c9",
+                      "inverse-surface": "#dae2fd",
+                      "surface-tint": "#4cd6ff",
+                      "inverse-primary": "#00677f",
+                      "error": "#ffb4ab",
+                      "on-secondary-fixed": "#002116",
+                      "on-primary-container": "#00566a",
+                      "error-container": "#93000a",
+                      "tertiary": "#e4d6ff",
+                      "on-primary": "#003543",
+                      "outline-variant": "#3c494e",
+                      "on-secondary-fixed-variant": "#00513c",
+                      "on-secondary-container": "#007255",
+                      "tertiary-container": "#cbb5ff",
+                      "on-tertiary": "#3c0090",
+                      "surface-variant": "#2d3449",
+                      "background": "#0b1326",
+                      "primary-container": "#00d1ff",
+                      "surface-container-lowest": "#060e20",
+                      "primary": "#a4e6ff",
+                      "tertiary-fixed-dim": "#d1bcff",
+                      "surface-container-low": "#131b2e",
+                      "on-error-container": "#ffdad6",
+                      "primary-fixed-dim": "#4cd6ff",
+                      "tertiary-fixed": "#e9ddff",
+                      "secondary-fixed": "#36ffc4",
+                      "primary-fixed": "#b7eaff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "margin-desktop": "80px",
+                      "margin-mobile": "16px",
+                      "gutter": "24px",
+                      "unit": "4px",
+                      "container-max": "1200px"
+              },
+              "fontFamily": {
+                      "display-xl": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "label-sm": [
+                              "jetbrainsMono"
+                      ],
+                      "code-accent": [
+                              "jetbrainsMono"
+                      ],
+                      "headline-lg-mobile": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "display-xl": [
+                              "64px",
+                              {
+                                      "lineHeight": "72px",
+                                      "letterSpacing": "-0.04em",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "code-accent": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        .circuit-bg {
+            background-image: radial-gradient(circle at 50% 50%, rgba(0, 209, 255, 0.05) 0%, transparent 50%),
+                              linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+            background-size: 100% 100%, 20px 20px, 20px 20px;
+        }
+
+        .glow-hover:hover {
+            box-shadow: 0 0 15px rgba(0, 209, 255, 0.2);
+            border-color: rgba(0, 209, 255, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md min-h-screen circuit-bg relative overflow-x-hidden selection:bg-primary/30 selection:text-primary">
+<!-- Background Atmospheric Effect -->
+<div class="fixed inset-0 pointer-events-none z-[-1] opacity-20">
+<div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-primary rounded-full blur-[120px]"></div>
+<div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-secondary-container rounded-full blur-[120px] opacity-10"></div>
+</div>
+<!-- Navigation from JSON -->
+<nav class="fixed top-0 w-full bg-surface/40 backdrop-blur-xl border-b border-outline-variant/10 z-50">
+<div class="flex justify-between items-center h-16 px-margin-desktop max-w-container-max mx-auto md:px-margin-desktop px-margin-mobile">
+<div class="font-display-xl text-headline-lg-mobile md:text-headline-lg tracking-tighter text-primary">THAMARA.DEV</div>
+<div class="hidden md:flex gap-gutter items-center">
+<a class="text-primary border-b-2 border-primary pb-1 font-code-accent text-code-accent hover:bg-primary/10 transition-all duration-300" href="#projects">Projects</a>
+<a class="text-on-surface-variant hover:text-primary font-code-accent text-code-accent hover:bg-primary/10 transition-all duration-300" href="#skills">Skills</a>
+<a class="text-on-surface-variant hover:text-primary font-code-accent text-code-accent hover:bg-primary/10 transition-all duration-300" href="#experience">Experience</a>
+<button onclick="window.location.href='mailto:thamarasasanka@gmail.com'" class="bg-primary text-surface px-6 py-2 rounded font-label-sm text-label-sm hover:shadow-[0_0_15px_rgba(164,230,255,0.4)] transition-all ml-4 active:scale-95">Contact</button>
+</div>
+<!-- Mobile Menu Icon -->
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<!-- Hero Section -->
+<section id="about" class="scroll-mt-24 flex flex-col lg:flex-row gap-12 items-center lg:items-start mb-32">
+<div class="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-2 border-primary/30 shrink-0 relative p-1 glow-hover transition-all duration-500">
+<div class="w-full h-full rounded-full overflow-hidden bg-surface-container">
+<img alt="Thamara Senanayake" class="w-full h-full object-cover transition-all duration-500" src="assets/my/thamaraSenanayake.jpg"/>
+</div>
+</div>
+<div class="flex-1 text-center lg:text-left">
+<h1 class="font-display-xl text-display-xl md:text-[64px] text-headline-lg-mobile text-primary mb-4 uppercase leading-tight">
+                    Mobile App<br class="hidden md:block"/> Development
+                </h1>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-6 uppercase tracking-wider">Thamara Senanayake</h2>
+<div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
+<a class="flex items-center justify-center gap-2 bg-surface-container-high border border-outline-variant/30 px-4 py-2 rounded-lg hover:border-primary/50 transition-colors" href="https://github.com/thamaraSenanayake" target="_blank">
+<span class="material-symbols-outlined text-primary">code</span>
+<span class="font-code-accent text-code-accent text-primary">thamaraSenanayake</span>
+</a>
+</div>
+<div id="experience" class="scroll-mt-24 bg-surface-container-low p-6 rounded-xl border border-outline-variant/20 mb-8 inline-block text-left">
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 max-w-2xl">
+                        I build cross-platform apps using Flutter with proper software architecture for scalability and maintainability. The same codebase runs on <strong class="text-on-surface">Android, iOS, Web, Windows, macOS,</strong> and <strong class="text-on-surface">Linux</strong> – with no extra cost.
+                    </p>
+<div class="flex flex-col gap-2 font-code-accent text-code-accent">
+<div class="flex items-center gap-2">
+<span class="text-primary">&gt;</span>
+<span class="text-secondary-fixed">8+</span> years in <strong class="text-on-surface">software development</strong>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-primary">&gt;</span>
+<span class="text-secondary-fixed">7+</span> years in <strong class="text-on-surface">Flutter</strong>
+</div>
+</div>
+</div>
+<!-- Value Proposition Checklist -->
+<div class="flex flex-col gap-3 font-code-accent text-code-accent text-on-surface-variant">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-container" data-weight="fill">check_circle</span>
+                        No extra UI/UX design cost
+                    </div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-container" data-weight="fill">check_circle</span>
+                        Free Play Store publishing
+                    </div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-container" data-weight="fill">check_circle</span>
+                        Free maintenance
+                    </div>
+</div>
+</div>
+</section>
+<!-- Skills Section -->
+<section id="skills" class="scroll-mt-24 mb-32">
+<h3 class="font-headline-lg text-headline-lg text-primary mb-8 border-b border-outline-variant/20 pb-4 inline-block">Technical Stack</h3>
+<div class="flex flex-wrap gap-4">
+<div class="bg-[#1E293B] border border-outline-variant/30 px-4 py-2 rounded font-label-sm text-label-sm text-primary glow-hover cursor-default transition-all duration-300">#Flutter</div>
+<div class="bg-[#1E293B] border border-outline-variant/30 px-4 py-2 rounded font-label-sm text-label-sm text-primary glow-hover cursor-default transition-all duration-300">#Android</div>
+<div class="bg-[#1E293B] border border-outline-variant/30 px-4 py-2 rounded font-label-sm text-label-sm text-primary glow-hover cursor-default transition-all duration-300">#iOS</div>
+<div class="bg-[#1E293B] border border-outline-variant/30 px-4 py-2 rounded font-label-sm text-label-sm text-primary glow-hover cursor-default transition-all duration-300">#UI/UX</div>
+<div class="bg-[#1E293B] border border-outline-variant/30 px-4 py-2 rounded font-label-sm text-label-sm text-primary glow-hover cursor-default transition-all duration-300">#FIREBASE</div>
+</div>
+</section>
+<!-- Sample Apps Grid -->
+<section id="projects" class="scroll-mt-24">
+<h3 class="font-headline-lg text-headline-lg text-primary mb-12 border-b border-outline-variant/20 pb-4 inline-block">Sample Apps</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+<!-- Projects loaded dynamically from projects.js -->
+</div>
+</section>
+</main>
+<!-- Footer from JSON -->
+<footer class="bg-surface-container-lowest w-full py-12 border-t border-outline-variant/20">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop max-w-container-max mx-auto gap-gutter px-margin-mobile">
+<div class="font-headline-lg text-headline-lg text-primary text-center md:text-left mb-4 md:mb-0">
+                THAMARA.DEV
+            </div>
+<div class="font-label-sm text-label-sm text-on-surface-variant text-center mb-4 md:mb-0">
+                © 2024 Thamara Senanayake. Engineered for Performance.
+            </div>
+<div class="flex gap-4 font-label-sm text-label-sm">
+<a class="text-on-surface-variant hover:text-secondary-fixed transition-colors hover:translate-y-[-2px] inline-block" href="#">GitHub</a>
+<a class="text-on-surface-variant hover:text-secondary-fixed transition-colors hover:translate-y-[-2px] inline-block" href="#">LinkedIn</a>
+<a class="text-on-surface-variant hover:text-secondary-fixed transition-colors hover:translate-y-[-2px] inline-block" href="#">Twitter</a>
+<a class="text-on-surface-variant hover:text-secondary-fixed transition-colors hover:translate-y-[-2px] inline-block" href="#">Drive</a>
+</div>
+</div>
+<script src="projects.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const grid = document.getElementById("projects-grid");
+        if (grid) {
+            grid.innerHTML = "";
+            projectsData.forEach(project => {
+                const card = document.createElement("div");
+                card.className = "bg-surface/40 backdrop-blur-xl border border-outline-variant/10 rounded-xl p-8 flex flex-col glow-hover transition-all duration-300 group";
+                
+                card.innerHTML = `
+                    <div class="w-24 h-24 bg-surface-container rounded-2xl mb-6 flex items-center justify-center border border-outline-variant/20 group-hover:border-primary/50 transition-colors">
+                        <img alt="${project.title} Icon" class="w-16 h-16 object-contain opacity-80 group-hover:opacity-100 transition-opacity" src="${project.iconUrl}"/>
+                    </div>
+                    <h4 class="font-headline-lg text-headline-lg-mobile text-on-surface mb-2">${project.title}</h4>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-1">${project.shortDescription}</p>
+                    <div class="flex gap-2 flex-wrap mt-auto">
+                        <button onclick="window.location.href='project_detail.html?project=${project.id}'" class="bg-surface-container-high border border-primary/30 text-primary px-3 py-1.5 rounded font-label-sm text-label-sm hover:bg-primary/10 transition-colors flex items-center gap-1">
+                            <span class="material-symbols-outlined text-[16px]">open_in_new</span> Expand Details
+                        </button>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Active tab highlighting on scroll and click
+        const navLinks = document.querySelectorAll("nav a[href^='#']");
+        const scrollTargets = document.querySelectorAll("#about, #skills, #experience, #projects");
+
+        function setActiveLink(targetId) {
+            navLinks.forEach(link => {
+                const href = link.getAttribute("href");
+                if (href === `#${targetId}`) {
+                    link.classList.add("text-primary", "border-b-2", "border-primary", "pb-1");
+                    link.classList.remove("text-on-surface-variant");
+                } else {
+                    link.classList.remove("text-primary", "border-b-2", "border-primary", "pb-1");
+                    link.classList.add("text-on-surface-variant");
+                }
+            });
+        }
+
+        // Setup Intersection Observer
+        const observerOptions = {
+            root: null,
+            rootMargin: "-30% 0px -50% 0px", // triggers when section is in the primary viewing area
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setActiveLink(entry.target.id);
+                }
+            });
+        }, observerOptions);
+
+        scrollTargets.forEach(target => {
+            if (target) observer.observe(target);
+        });
+
+        // Add manual click highlights
+        navLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                const targetId = link.getAttribute("href").substring(1);
+                setActiveLink(targetId);
+            });
+        });
+    });
+</script>
+</body></html>

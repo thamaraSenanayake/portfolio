@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Project Details - Habit Flow</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-primary-fixed-variant": "#004e60",
+                      "secondary-container": "#36ffc4",
+                      "surface-container": "#171f33",
+                      "on-tertiary-container": "#6000dd",
+                      "secondary-fixed-dim": "#00e1ab",
+                      "on-tertiary-fixed": "#23005b",
+                      "inverse-on-surface": "#283044",
+                      "on-secondary": "#003828",
+                      "on-error": "#690005",
+                      "on-surface-variant": "#bbc9cf",
+                      "surface-container-high": "#222a3d",
+                      "on-background": "#dae2fd",
+                      "secondary": "#ffffff",
+                      "on-surface": "#dae2fd",
+                      "surface-bright": "#31394d",
+                      "surface-container-highest": "#2d3449",
+                      "surface": "#0b1326",
+                      "on-primary-fixed": "#001f28",
+                      "surface-dim": "#0b1326",
+                      "outline": "#859399",
+                      "on-tertiary-fixed-variant": "#5700c9",
+                      "inverse-surface": "#dae2fd",
+                      "surface-tint": "#4cd6ff",
+                      "inverse-primary": "#00677f",
+                      "error": "#ffb4ab",
+                      "on-secondary-fixed": "#002116",
+                      "on-primary-container": "#00566a",
+                      "error-container": "#93000a",
+                      "tertiary": "#e4d6ff",
+                      "on-primary": "#003543",
+                      "outline-variant": "#3c494e",
+                      "on-secondary-fixed-variant": "#00513c",
+                      "on-secondary-container": "#007255",
+                      "tertiary-container": "#cbb5ff",
+                      "on-tertiary": "#3c0090",
+                      "surface-variant": "#2d3449",
+                      "background": "#0b1326",
+                      "primary-container": "#00d1ff",
+                      "surface-container-lowest": "#060e20",
+                      "primary": "#a4e6ff",
+                      "tertiary-fixed-dim": "#d1bcff",
+                      "surface-container-low": "#131b2e",
+                      "on-error-container": "#ffdad6",
+                      "primary-fixed-dim": "#4cd6ff",
+                      "tertiary-fixed": "#e9ddff",
+                      "secondary-fixed": "#36ffc4",
+                      "primary-fixed": "#b7eaff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "margin-desktop": "80px",
+                      "margin-mobile": "16px",
+                      "gutter": "24px",
+                      "unit": "4px",
+                      "container-max": "1200px"
+              },
+              "fontFamily": {
+                      "display-xl": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "label-sm": [
+                              "JetBrains Mono"
+                      ],
+                      "code-accent": [
+                              "JetBrains Mono"
+                      ],
+                      "headline-lg-mobile": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "display-xl": [
+                              "64px",
+                              {
+                                      "lineHeight": "72px",
+                                      "letterSpacing": "-0.04em",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "code-accent": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        body {
+            background-color: #0b1326;
+            color: #dae2fd;
+        }
+        .glow-effect:hover {
+            box-shadow: 0 0 15px rgba(164, 230, 255, 0.2);
+        }
+        .circuit-bg {
+            background-image: radial-gradient(circle at 50% 50%, rgba(164, 230, 255, 0.05) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col font-body-md antialiased overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/40 backdrop-blur-xl border-b border-outline-variant/10">
+<div class="flex justify-between items-center h-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<a class="font-display-xl text-headline-lg-mobile tracking-tighter text-primary" href="portfolio.html">THAMARA.DEV</a>
+<div class="hidden md:flex space-x-gutter">
+<a class="text-primary border-b-2 border-primary pb-1 font-code-accent text-code-accent" href="portfolio.html#projects">Projects</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:bg-primary/10 transition-all duration-300 font-code-accent text-code-accent" href="portfolio.html#skills">Skills</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:bg-primary/10 transition-all duration-300 font-code-accent text-code-accent" href="portfolio.html#experience">Experience</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:bg-primary/10 transition-all duration-300 font-code-accent text-code-accent" href="portfolio.html#about">About</a>
+</div>
+<button onclick="window.location.href='mailto:thamarasasanka@gmail.com'" class="hidden md:block px-4 py-2 border border-primary text-primary font-code-accent text-code-accent rounded-DEFAULT hover:bg-primary/10 transition-all duration-300 active:scale-95 glow-effect">Contact</button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content Canvas (Modal/Overlay Style) -->
+<main class="flex-grow pt-24 pb-12 px-margin-mobile md:px-margin-desktop relative circuit-bg">
+<!-- Background Ambient Glow -->
+<div class="absolute inset-0 z-0 pointer-events-none opacity-20 flex justify-center items-center">
+<div class="w-[800px] h-[800px] bg-primary/20 rounded-full blur-[120px]"></div>
+</div>
+<div class="max-w-container-max mx-auto relative z-10">
+<!-- Breadcrumbs / Back Action -->
+<div class="mb-8">
+<a class="inline-flex items-center text-on-surface-variant hover:text-primary transition-colors font-code-accent text-code-accent group" href="portfolio.html">
+<span class="material-symbols-outlined mr-2 text-sm group-hover:-translate-x-1 transition-transform" data-icon="arrow_back">arrow_back</span>
+                    Back to Projects
+                </a>
+</div>
+<!-- Project Details Container -->
+<div class="bg-surface/40 backdrop-blur-xl border border-outline-variant/30 rounded-xl overflow-hidden shadow-2xl relative group hover:border-primary/30 transition-all duration-500">
+<div class="flex flex-col lg:flex-row">
+<!-- Left Column: Visuals & Links (System Specs) -->
+<div class="lg:w-2/5 border-b lg:border-b-0 lg:border-r border-outline-variant/20 p-8 flex flex-col gap-8 bg-surface-container-lowest/50">
+<!-- App Icon & Title -->
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 bg-surface-container-highest rounded-xl border border-outline-variant/50 flex items-center justify-center p-2">
+<!-- Placeholder for App Icon -->
+<img id="project-icon" class="w-full h-full object-contain rounded-lg" src=""/>
+</div>
+<div>
+<h1 id="project-title" class="font-headline-lg-mobile md:font-headline-lg text-on-surface"></h1>
+<p id="project-subtitle" class="font-code-accent text-code-accent text-primary"></p>
+</div>
+</div>
+<!-- Main Visual Placeholder (Screenshots) -->
+<div id="project-screenshot-container" class="relative w-full aspect-[9/16] max-h-[500px] mx-auto bg-surface-container-highest border border-outline-variant/30 rounded-lg overflow-hidden flex items-center justify-center group-hover:border-primary/40 transition-colors duration-500">
+<!-- Screenshot or placeholder loaded dynamically -->
+</div>
+<!-- Thumbnail Gallery -->
+<div id="project-thumbnails-container" class="flex gap-2 overflow-x-auto mt-2 pb-2 max-w-full justify-start select-none">
+<!-- Thumbnails loaded dynamically -->
+</div>
+<!-- Action Links -->
+<div class="flex flex-col gap-3 mt-auto">
+<a id="link-drive" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 w-full p-3 bg-surface-container border border-outline-variant/30 rounded-DEFAULT text-on-surface hover:bg-surface-container-high hover:border-primary/50 transition-all duration-300 glow-effect font-code-accent text-code-accent" href="#">
+<span class="material-symbols-outlined text-primary" data-icon="folder">folder</span>
+<span>Google Drive link</span>
+<span class="material-symbols-outlined ml-auto text-on-surface-variant text-sm" data-icon="open_in_new">open_in_new</span>
+</a>
+<a id="link-github" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 w-full p-3 bg-surface-container border border-outline-variant/30 rounded-DEFAULT text-on-surface hover:bg-surface-container-high hover:border-primary/50 transition-all duration-300 glow-effect font-code-accent text-code-accent" href="#">
+<span class="material-symbols-outlined text-primary" data-icon="code">code</span>
+<span>Git Repo link</span>
+<span class="material-symbols-outlined ml-auto text-on-surface-variant text-sm" data-icon="open_in_new">open_in_new</span>
+</a>
+<a id="link-playstore" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 w-full p-3 bg-primary/10 border border-primary/30 rounded-DEFAULT text-primary hover:bg-primary/20 hover:border-primary transition-all duration-300 glow-effect font-code-accent text-code-accent" href="#">
+<span class="material-symbols-outlined" data-icon="shop">shop</span>
+<span>Play Store</span>
+<span class="material-symbols-outlined ml-auto text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Right Column: Project Narrative & Details -->
+<div class="lg:w-3/5 p-8 flex flex-col gap-10">
+<!-- Description Section -->
+<div>
+<h2 class="font-code-accent text-code-accent text-on-surface-variant uppercase tracking-widest mb-4 flex items-center gap-2">
+<span class="w-4 h-[1px] bg-primary/50 block"></span>
+                                Overview
+                            </h2>
+<p id="project-overview" class="font-body-md text-on-surface leading-relaxed mb-6 text-lg">
+    <!-- Loaded dynamically -->
+</p>
+</div>
+<!-- Technical Stack Badges -->
+<div>
+<h2 class="font-code-accent text-code-accent text-on-surface-variant uppercase tracking-widest mb-4 flex items-center gap-2">
+<span class="w-4 h-[1px] bg-primary/50 block"></span>
+                                Stack
+                            </h2>
+<div id="project-stack" class="flex flex-wrap gap-2">
+    <!-- Loaded dynamically -->
+</div>
+</div>
+<!-- Key Features Grid -->
+<div>
+<h2 class="font-code-accent text-code-accent text-on-surface-variant uppercase tracking-widest mb-6 flex items-center gap-2">
+<span class="w-4 h-[1px] bg-primary/50 block"></span>
+                                System Features
+                            </h2>
+<div id="project-features" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <!-- Loaded dynamically -->
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest w-full py-12 border-t border-outline-variant/20">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop max-w-container-max mx-auto gap-gutter">
+<div class="font-headline-lg text-primary">THAMARA.DEV</div>
+<div class="flex gap-4">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary-fixed transition-colors hover:translate-y-[-2px]" href="#">GitHub</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary-fixed transition-colors hover:translate-y-[-2px]" href="#">LinkedIn</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary-fixed transition-colors hover:translate-y-[-2px]" href="#">Twitter</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary-fixed transition-colors hover:translate-y-[-2px]" href="#">Drive</a>
+</div>
+<div class="font-label-sm text-label-sm text-primary">© 2024 Thamara Senanayake. Engineered for Performance.</div>
+</div>
+</footer>
+<script src="projects.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Parse the URL search params to find the selected project
+        const params = new URLSearchParams(window.location.search);
+        const projectId = params.get("project") || "habit-flow"; // default to habit-flow if not provided
+        
+        // Find the project data
+        const project = projectsData.find(p => p.id === projectId);
+        if (!project) {
+            console.error("Project not found: " + projectId);
+            window.location.href = "portfolio.html";
+            return;
+        }
+
+        // Set document title
+        document.title = "Project Details - " + project.title;
+
+        // Set Icon, Title and Subtitle
+        document.getElementById("project-icon").src = project.detailIconUrl || project.iconUrl;
+        document.getElementById("project-icon").alt = project.title + " Icon";
+        document.getElementById("project-title").textContent = project.title;
+        document.getElementById("project-subtitle").textContent = project.subtitle;
+
+        // Set Screenshots / Gallery
+        const screenshotContainer = document.getElementById("project-screenshot-container");
+        const thumbnailsContainer = document.getElementById("project-thumbnails-container");
+
+        function displayActiveScreenshot(url) {
+            screenshotContainer.innerHTML = `
+                <div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent z-10 pointer-events-none"></div>
+                <img class="w-full h-full object-cover z-0" alt="${project.title} Screenshot" src="${url}"/>
+                <div class="absolute bottom-4 left-4 z-20 font-code-accent text-label-sm text-primary-fixed bg-surface/80 px-2 py-1 rounded backdrop-blur-md border border-primary/20">
+                    &gt; Mobile View
+                </div>
+            `;
+        }
+
+        if (project.screenshots && project.screenshots.length > 0) {
+            // Display first screenshot as default active
+            displayActiveScreenshot(project.screenshots[0]);
+
+            // Populate thumbnails
+            thumbnailsContainer.innerHTML = "";
+            project.screenshots.forEach((url, index) => {
+                const thumbnailButton = document.createElement("button");
+                thumbnailButton.className = `w-14 h-24 flex-shrink-0 bg-surface-container border rounded overflow-hidden transition-all duration-300 ${index === 0 ? "border-primary scale-105" : "border-outline-variant/30 opacity-70 hover:opacity-100"}`;
+                thumbnailButton.innerHTML = `<img class="w-full h-full object-cover" src="${url}" alt="Thumbnail ${index + 1}"/>`;
+                
+                thumbnailButton.addEventListener("click", () => {
+                    displayActiveScreenshot(url);
+                    thumbnailsContainer.querySelectorAll("button").forEach(btn => {
+                        btn.className = "w-14 h-24 flex-shrink-0 bg-surface-container border border-outline-variant/30 rounded overflow-hidden transition-all duration-300 opacity-70 hover:opacity-100";
+                    });
+                    thumbnailButton.className = "w-14 h-24 flex-shrink-0 bg-surface-container border border-primary scale-105 rounded overflow-hidden transition-all duration-300";
+                });
+                
+                thumbnailsContainer.appendChild(thumbnailButton);
+            });
+        } else {
+            // Placeholder Concept View
+            screenshotContainer.innerHTML = `
+                <div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent z-10 pointer-events-none"></div>
+                <div class="z-0 flex flex-col items-center justify-center p-8 text-center gap-6">
+                    <div class="w-20 h-20 bg-surface-container rounded-2xl flex items-center justify-center border border-outline-variant/20 shadow-[0_0_15px_rgba(0,209,255,0.15)]">
+                        <img class="w-12 h-12 object-contain opacity-60" src="${project.iconUrl}"/>
+                    </div>
+                    <div class="font-headline-lg text-primary tracking-tighter">${project.title}</div>
+                    <div class="text-sm text-on-surface-variant font-code-accent">[ Live Mockup coming soon ]</div>
+                </div>
+                <div class="absolute bottom-4 left-4 z-20 font-code-accent text-label-sm text-primary-fixed bg-surface/80 px-2 py-1 rounded backdrop-blur-md border border-primary/20">
+                    &gt; Concept View
+                </div>
+            `;
+            thumbnailsContainer.innerHTML = "";
+        }
+
+        // Set Action Links (hide or style differently if '#' or not set)
+        const driveLink = document.getElementById("link-drive");
+        if (project.links.drive && project.links.drive !== "#") {
+            driveLink.href = project.links.drive;
+        } else {
+            driveLink.style.opacity = "0.5";
+            driveLink.style.pointerEvents = "none";
+            driveLink.querySelector("span:not(.material-symbols-outlined)").textContent = "Google Drive (Unavailable)";
+        }
+
+        const githubLink = document.getElementById("link-github");
+        if (project.links.github && project.links.github !== "#") {
+            githubLink.href = project.links.github;
+        } else {
+            githubLink.style.opacity = "0.5";
+            githubLink.style.pointerEvents = "none";
+            githubLink.querySelector("span:not(.material-symbols-outlined)").textContent = "Git Repo (Unavailable)";
+        }
+
+        const playStoreLink = document.getElementById("link-playstore");
+        if (project.links.playStore && project.links.playStore !== "#") {
+            playStoreLink.href = project.links.playStore;
+        } else {
+            playStoreLink.style.opacity = "0.5";
+            playStoreLink.style.pointerEvents = "none";
+            playStoreLink.querySelector("span:not(.material-symbols-outlined)").textContent = "Play Store (Unavailable)";
+        }
+
+        // Set Overview description
+        document.getElementById("project-overview").textContent = project.overview;
+
+        // Set Tech Stack Badges
+        const stackContainer = document.getElementById("project-stack");
+        stackContainer.innerHTML = "";
+        project.stack.forEach(tech => {
+            const badge = document.createElement("span");
+            badge.className = "px-3 py-1 bg-surface-container-high border border-outline-variant/30 rounded font-label-sm text-label-sm text-primary";
+            badge.textContent = tech;
+            stackContainer.appendChild(badge);
+        });
+
+        // Set Features
+        const featuresContainer = document.getElementById("project-features");
+        featuresContainer.innerHTML = "";
+        project.features.forEach(feature => {
+            const featDiv = document.createElement("div");
+            featDiv.className = "p-4 bg-surface-container border border-outline-variant/20 rounded-lg hover:border-primary/30 transition-colors";
+            featDiv.innerHTML = `
+                <div class="flex items-center gap-3 mb-2">
+                    <span class="material-symbols-outlined text-primary" data-icon="${feature.icon}">${feature.icon}</span>
+                    <h3 class="font-body-md font-bold text-on-surface">${feature.title}</h3>
+                </div>
+                <p class="font-body-md text-sm text-on-surface-variant">${feature.description}</p>
+            `;
+            featuresContainer.appendChild(featDiv);
+        });
+    });
+</script>
+</body></html>
